@@ -1,7 +1,11 @@
 import "./Header.css";
 import Switch from "@mui/material/Switch";
-
+import { useState } from "react";
 export default function Header(props) {
+  const [service, setService] = useState("to-do list");
+  function handleServiceChange() {
+    service === "to-do list" ? setService("notes") : setService("to-do list");
+  }
   return (
     <>
       <header className="header">
@@ -14,8 +18,8 @@ export default function Header(props) {
           <span className="date__day">Thursday</span>
         </div>
         <div className="menu">
-          <div className="service">to-do list</div>
-          <Switch color="secondary" />
+          <div className="service">{service}</div>
+          <Switch color="secondary" onChange={handleServiceChange} />
         </div>
       </header>
     </>
