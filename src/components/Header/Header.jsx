@@ -3,10 +3,11 @@ import Switch from "@mui/material/Switch";
 import { useState } from "react";
 import { daysOfWeek, months } from "./dates.js";
 
-export default function Header(props) {
+export default function Header({ updateCurrentService }) {
   const [service, setService] = useState("to-do list");
   function handleServiceChange() {
     service === "to-do list" ? setService("notes") : setService("to-do list");
+    updateCurrentService(service === "to-do list" ? "notes" : "to-do list");
   }
   const currentDate = new Date();
   const date = currentDate.getDate();

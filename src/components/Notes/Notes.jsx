@@ -1,4 +1,3 @@
 export default function Notes(props) {
-    return <></>;
-  }
-  
+  return <>notes</>;
+}
