@@ -2,10 +2,10 @@ import "./ToDo.css";
 import ToDoItem from "./ToDoItem.jsx";
 import { useState, useEffect } from "react";
 
+const initialData = JSON.parse(localStorage.getItem("ToDoData")) || [
+  { id: 1, isToDoChecked: false, textOfToDo: "ToDo example 💕" },
+];
 export default function ToDo() {
-  const initialData = JSON.parse(localStorage.getItem("ToDoData")) || [
-    { id: 1, isToDoChecked: false, textOfToDo: "ToDo example 💕" },
-  ];
   const [inputText, setInputText] = useState("");
   const [isStringBig, setisStringBig] = useState(false);
   const [ToDoData, setToDoData] = useState(initialData);
@@ -26,6 +26,18 @@ export default function ToDo() {
   function handleDelete(id) {
     setToDoData((prevState) => prevState.filter((item) => item.id !== id));
   }
+  function handleCheck(id) {
+    setToDoData((prevToDoData) => {
+      return prevToDoData.map((item) => {
+        if (item.id === id && !item.isToDoChecked) {
+          return { ...item, isToDoChecked: true };
+        } else if (item.id === id && item.isToDoChecked) {
+          return { ...item, isToDoChecked: false };
+        }
+        return item;
+      });
+    });
+  }
 
   function handleInputChange(event) {
     if (event.target.value.length > 30) {
@@ -40,8 +52,6 @@ export default function ToDo() {
       }
     }
   }
-
-  console.log(ToDoData);
 
   return (
     <>
@@ -73,6 +83,7 @@ export default function ToDo() {
             isToDoChecked={ToDo.isToDoChecked}
             textOfToDo={ToDo.textOfToDo}
             onDelete={handleDelete}
+            onCheck={handleCheck}
           />
         ))}
       </div>

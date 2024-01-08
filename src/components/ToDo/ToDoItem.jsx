@@ -1,6 +1,12 @@
 import "./ToDo.css";
 
-export default function ToDoItem({ id, isToDoChecked, textOfToDo, onDelete }) {
+export default function ToDoItem({
+  id,
+  isToDoChecked,
+  textOfToDo,
+  onDelete,
+  onCheck,
+}) {
   return (
     <>
       <div className="todo-item">
@@ -11,6 +17,7 @@ export default function ToDoItem({ id, isToDoChecked, textOfToDo, onDelete }) {
                 ? "todo-item__checkbox todo-item__checkbox--checked"
                 : "todo-item__checkbox"
             }
+            onClick={() => onCheck(id)}
           ></div>
           <p
             className={
