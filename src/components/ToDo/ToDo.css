@@ -1,0 +1,99 @@
+.todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.todo .todo-input {
+  margin-top: 80px;
+}
+.big-str-alert {
+  color: tomato;
+  font-family: "Roboto flex";
+}
+.todo .big-str-alert {
+  margin-top: 12px;
+}
+.todo-input,
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 506px;
+  height: 78px;
+  border-radius: 8px;
+  background: #f4f4f4;
+}
+.todo-input__input {
+  width: 70%;
+  margin-left: 38px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: inherit;
+}
+.todo-item__text {
+  font-size: 16px;
+  font-family: "Roboto flex";
+}
+.todo-input__input::placeholder {
+  color: #7c7c7c;
+}
+.todo-input__add-btn,
+.todo-item__close-btn,
+.todo-item__checkbox {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+.todo-input__add-btn {
+  width: 47px;
+  height: 47px;
+  margin-right: 15px;
+  background-image: url("../../assets/add-btn.svg");
+}
+.todo-item__close-btn {
+  width: 36px;
+  height: 36px;
+  margin-right: 20px;
+  background-image: url("../../assets/close-btn.svg");
+}
+.todo-input__add-btn:hover {
+  background-image: url("../../assets/add-btn-active.svg");
+}
+.todo-item__close-btn:hover {
+  background-image: url("../../assets/close-btn-active.svg");
+}
+.todo-item__checkbox {
+  width: 46px;
+  height: 46px;
+  margin-left: 15px;
+  background-image: url("../../assets/checkbox-disabled.svg");
+}
+.todo-input__add-btn:active {
+  transform: translateY(2px);
+}
+.todo-item__close-btn:active {
+  transform: translateY(2px);
+}
+.todo-item {
+  margin-top: 16px;
+}
+.todo-item:nth-child(2) {
+  margin-top: 46px;
+}
+.todo-item__text--checked {
+  text-decoration: line-through;
+}
+.todo-item__checkbox--checked {
+  background-image: url("../../assets/checkbox-active.svg");
+}
+.todo-item__wrapper {
+  display: flex;
+  align-items: center;
+}
+.todo-item:last-child {
+  margin-bottom: 46px;
+}
