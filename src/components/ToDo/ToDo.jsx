@@ -2,13 +2,12 @@ import "./ToDo.css";
 import ToDoItem from "./ToDoItem.jsx";
 import { useState, useEffect } from "react";
 
-const initialData = JSON.parse(localStorage.getItem("ToDoData")) || [
-  { id: 1, isToDoChecked: false, textOfToDo: "ToDo example 💕" },
-];
 export default function ToDo() {
   const [inputText, setInputText] = useState("");
   const [isStringBig, setisStringBig] = useState(false);
-  const [ToDoData, setToDoData] = useState(initialData);
+  const [ToDoData, setToDoData] = useState(
+    JSON.parse(localStorage.getItem("ToDoData")),
+  );
   useEffect(() => {
     localStorage.setItem("ToDoData", JSON.stringify(ToDoData));
   }, [ToDoData]);
@@ -21,6 +20,7 @@ export default function ToDo() {
         textOfToDo: inputText,
       };
       setToDoData((prevState) => [...prevState, newElement]);
+      setInputText("");
     }
   }
   function handleDelete(id) {
@@ -43,12 +43,13 @@ export default function ToDo() {
     if (event.target.value.length > 30) {
       setisStringBig(true);
     } else {
-      console.log(event.target.value.length);
       setisStringBig(false);
       setInputText(event.target.value);
+
       if (event.key === "Enter") {
         handleClick();
         event.target.value = "";
+        setInputText("");
       }
     }
   }
@@ -68,7 +69,6 @@ export default function ToDo() {
           <button
             className="todo-input__add-btn"
             onClick={() => {
-              console.log(ToDoData);
               handleClick();
             }}
           ></button>
