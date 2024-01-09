@@ -1,0 +1,146 @@
+/* Цвета */
+body {
+  background-color: #f0f0f0; /* Рассмотрите более мягкий цвет фона */
+}
+
+.notes-container button {
+  background-color: #3498db; /* Основной цвет кнопок */
+  border: 1px solid #3498db; /* Добавьте границу для акцента */
+}
+
+/* Типографика */
+body {
+  font-family: 'Open Sans', sans-serif; /* Выберите согласованный шрифт */
+}
+
+/* Расстояние и отступы */
+.note-card {
+  margin-bottom: 15px; /* Добавьте пространство между карточками */
+}
+
+/* Границы и тени */
+.note-card {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Добавьте небольшую тень */
+}
+
+/* Адаптивный дизайн */
+@media only screen and (max-width: 600px) {
+  .note-card {
+    padding: 15px; /* Измените отступ для меньших экранов */
+  }
+}
+
+
+/* Глобальные стили */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Контейнер для заметок */
+.notes-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Стили заголовка */
+.notes-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Стили ввода */
+.notes-container input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+
+}
+
+/* Стили кнопок */
+.notes-container button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.notes-container button:hover {
+  background-color: #45a049;
+}
+
+/* Содержимое заметок в виде сетки */
+.notes-container .notes-content {
+  margin-top: 20px;
+}
+
+/* Стили карточки заметки */
+.note-card, .chakra-card {
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 10px; /* Изменен отступ для обеих стилей карточек */
+}
+
+/* Стили заголовка заметки */
+.note-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-btns {
+  display: flex !important;
+  gap: 5%;
+  place-content: center;
+}
+
+/* Стили кнопки редактирования */
+.edit-button, .delete-button {
+  width: 110px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.edit-button {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+}
+
+/* Стили кнопки удаления */
+.delete-button {
+  background-color: #d46e62 !important;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #ff1900 !important;
+}
+
+/* Адаптивный дизайн */
+@media only screen and (max-width: 600px) {
+  .notes-container {
+    padding: 10px;
+  }
+}
