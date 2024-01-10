@@ -97,3 +97,40 @@
 .todo-item:last-child {
   margin-bottom: 46px;
 }
+@media screen and (max-width: 587px) {
+  .service {
+    display: none;
+  }
+  .date {
+    margin-left: 35px;
+  }
+  .date__day {
+    margin-left: 24px;
+  }
+  .todo-input,
+  .todo-item {
+    width: 421px;
+  }
+}
+@media screen and (max-width: 446px) {
+  .todo-input,
+  .todo-item {
+    width: 360px !important;
+  }
+  .todo-item__checkbox {
+    margin-left: 0px !important;
+  }
+  .todo-item__close-btn {
+    margin-right: 10px !important;
+  }
+  .todo-item__text {
+    font-size: 15px !important;
+  }
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}

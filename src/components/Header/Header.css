@@ -35,3 +35,8 @@
   font-size: 15px;
   margin-left: 38px;
 }
+@media screen and (max-width: 587px) {
+  .header {
+    justify-content: space-evenly;
+  }
+}
