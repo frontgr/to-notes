@@ -1,0 +1,128 @@
+.notes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.notes-item {
+  padding-left: 38px;
+}
+
+.notes-item__text {
+  font-size: 16px;
+  font-family: "Roboto flex";
+  word-wrap: break-word; 
+  white-space: normal; 
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .notes-input,
+  .notes-item {
+    width: 306px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .notes-input,
+  .notes-item {
+    width: 266px;
+  }
+}
+
+.notes .notes-input {
+  margin-top: 80px;
+}
+.big-str-alert {
+  color: tomato;
+  font-family: "Roboto flex";
+}
+.notes .big-str-alert {
+  margin-top: 12px;
+}
+.notes-input,
+.notes-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 506px;
+  height: 78px;
+  border-radius: 8px;
+  background: #f4f4f4;
+}
+
+@media screen and (max-width: 600px) {
+  .notes-input,
+  .notes-item {
+    width: 306px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .notes-input,
+  .notes-item {
+    width: 266px;
+  }
+}
+
+.notes-input__input {
+  width: 70%;
+  margin-left: 38px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: inherit;
+}
+.notes-item__text {
+  font-size: 16px;
+  font-family: "Roboto flex";
+}
+.notes-input__input::placeholder {
+  color: #7c7c7c;
+}
+.notes-input__add-btn,
+.notes-item__close-btn{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+.notes-input__add-btn {
+  width: 47px;
+  height: 47px;
+  margin-right: 15px;
+  background-image: url("../../assets/add-btn.svg");
+}
+.notes-item__close-btn {
+  width: 36px;
+  height: 36px;
+  margin-right: 20px;
+  background-image: url("../../assets/close-btn.svg");
+}
+.notes-input__add-btn:hover {
+  background-image: url("../../assets/add-btn-active.svg");
+}
+.notes-item__close-btn:hover {
+  background-image: url("../../assets/close-btn-active.svg");
+}
+
+.notes-input__add-btn:active {
+  transform: translateY(2px);
+}
+.notes-item__close-btn:active {
+  transform: translateY(2px);
+}
+.notes-item {
+  margin-top: 16px;
+}
+.notes-item:nth-child(2) {
+  margin-top: 46px;
+}
+.notes-item__wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.notes-item:last-child {
+  margin-bottom: 46px;
+}
